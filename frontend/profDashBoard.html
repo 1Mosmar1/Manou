@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Enseignant</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { background: #f8f9fa; }
+    .sidebar { background: #343a40; color: #fff; min-height: 100vh; }
+    .sidebar a { color: #fff; }
+    .content { padding: 20px; }
+    .card { margin-bottom: 20px; }
+    .dashboard-metric { font-size: 2em; }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar: Menu pour l'enseignant -->
+      <div class="col-md-2 sidebar p-3">
+        <h4>Menu Enseignant</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gestion des cours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Suivi des étudiants</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Évaluations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Notifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Paramètres</a></li>
+        </ul>
+      </div>
+      <!-- Content: Dashboard -->
+      <div class="col-md-10 content">
+        <h2>Dashboard Enseignant</h2>
+        <div class="row">
+          <!-- Carte: Nombre de cours enseignés -->
+          <div class="col-md-3">
+            <div class="card text-white bg-primary">
+              <div class="card-body">
+                <h5 class="card-title">Cours Enseignés</h5>
+                <p class="card-text dashboard-metric">5</p>
+              </div>
+            </div>
+          </div>
+          <!-- Carte: Total étudiants inscrits -->
+          <div class="col-md-3">
+            <div class="card text-white bg-success">
+              <div class="card-body">
+                <h5 class="card-title">Total Étudiants</h5>
+                <p class="card-text dashboard-metric">350</p>
+              </div>
+            </div>
+          </div>
+          <!-- Carte: Progression moyenne des étudiants -->
+          <div class="col-md-3">
+            <div class="card text-white bg-info">
+              <div class="card-body">
+                <h5 class="card-title">Progression Moy.</h5>
+                <p class="card-text dashboard-metric">75%</p>
+              </div>
+            </div>
+          </div>
+          <!-- Carte: Feedback moyen -->
+          <div class="col-md-3">
+            <div class="card text-white bg-warning">
+              <div class="card-body">
+                <h5 class="card-title">Feedback Moyen</h5>
+                <p class="card-text dashboard-metric">4.2/5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Graphique de performance des étudiants -->
+        <div class="card">
+          <div class="card-header">Performance des étudiants</div>
+          <div class="card-body">
+            <canvas id="performanceChart" width="400" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/profDashBoard.js"></script>
+</body>
+</html>

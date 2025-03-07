@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Organisme d'Accueil</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { background: #f8f9fa; }
+    .sidebar { background: #343a40; color: #fff; min-height: 100vh; }
+    .sidebar a { color: #fff; }
+    .content { padding: 20px; }
+    .card { margin-bottom: 20px; }
+    .dashboard-metric { font-size: 2em; }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-2 sidebar p-3">
+        <h4>Menu</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Utilisateurs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Formations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Paramètres</a></li>
+        </ul>
+      </div>
+      <!-- Content -->
+      <div class="col-md-10 content">
+        <h2>Dashboard Organisme d'Accueil</h2>
+        <div class="row">
+          <!-- Card: Nombre d'étudiants inscrits -->
+          <div class="col-md-3">
+            <div class="card text-white bg-primary">
+              <div class="card-body">
+                <h5 class="card-title">Étudiants inscrits</h5>
+                <p class="card-text dashboard-metric">1200</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card: Taux de complétion des cours -->
+          <div class="col-md-3">
+            <div class="card text-white bg-success">
+              <div class="card-body">
+                <h5 class="card-title">Complétion des cours</h5>
+                <p class="card-text dashboard-metric">75%</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card: Temps passé sur la plateforme -->
+          <div class="col-md-3">
+            <div class="card text-white bg-warning">
+              <div class="card-body">
+                <h5 class="card-title">Temps passé</h5>
+                <p class="card-text dashboard-metric">35h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Graphique de progression des cours -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">Progression des cours par matière</div>
+              <div class="card-body">
+                <canvas id="courseProgressChart" width="400" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/adminDhashboard.js"></script>
+</body>
+</html>
